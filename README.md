@@ -1,6 +1,6 @@
-# Project Loto
+# Project loto scoreboard
 
-This is the README file for the Project Loto.
+This is the README file for the Project loto scoreboard.
 
 ## Introduction
 
