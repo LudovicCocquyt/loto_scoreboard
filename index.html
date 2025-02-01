@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loto</title>
+        <link rel="stylesheet" href="assets/styles.css">
+
+        <script src="assets/menu.js"></script>
+        <script src="assets/tabs.js"></script>
+        <script src="assets/countdown.js"></script>
+        <script src="assets/function.js"></script>
+    </head>
+    <body>
+        <!-- Menu -->
+        <div class="tab">
+            <div class="menu" hidden>
+                <button class="tablinks item" onclick="openPage(event, 'parties')">Parties</button>
+                <button class="tablinks item" onclick="openPage(event, 'break')">Pause</button>
+                <button class="tablinks item" onclick="openPage(event, 'params')">Paramètres</button>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Parties -->
+        <div id="parties" class="tabcontent">
+            <div class="informations">
+                <table style="width: 40%;">
+                    <tr>
+                        <td onclick="displayMenu()" style="width: 5% !important;"> --- </td>
+                        <td class="quine q1" onclick="quine(1)">Quine</td>
+                        <td class="quine q2" onclick="quine(2)">Double quine</td>
+                        <td class="quine q3" onclick="quine(3)">Carton plein</td>
+                    </tr>
+                </table>
+                <table style="width: 50%;">
+                    <script>
+                        const parties = localStorage.getItem('partiesNumber') || 9;
+                        for (let i = 1; i <= parties; i++) {
+                            if (i % parties === 1) {
+                                document.write("<tr>");
+                                document.write("<td class='title'>Partie</td>");
+                            }
+                            document.write("<td class=\"party p"+ i +"\" onclick=\"party(" + i + ")\">" + i + "</td>");
+                        }
+                    </script>
+                </table>
+            </div>
+            <div class="top">
+                <div class="array">
+                    <table>
+                        <p class="title">
+                            <img onclick="reset()" src="./assets/images/rafraichir.png" alt="reset" style="width: 10px; height: 10px;">
+                            Tableau
+                        </p>
+                    <script>
+                        for (let i = 1; i <= 90; i++) {
+                            if (i % 10 === 1) {
+                                document.write("<tr>");
+                            }
+                            document.write("<td class=\""+ i +"\" onclick=\"changeNumber(" + i + ")\">" + i + "</td>");
+                        }
+                    </script>
+                    </table>
+                </div>
+                <div class="lastNumber">
+                    <p class="title">Dernier numéro sorti</p>
+                    <div id="lastNumber" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="orderList">
+                <p class="title" style="width: 100%; margin-bottom: 25px;">Ordre de sortie</p>
+                <div id="numberList"></div>
+            </div>
+        </div>
+
+        <!-- Braek -->
+        <div id="break" class="tabcontent" hidden>
+            <span id="countdown"></span>
+            <button id="startButton">Lancer la pause</button>
+        </div>
+
+        <!-- Paramètres -->
+        <div id="params" class="tabcontent" hidden  style="text-align: center;">
+            <p>Nombre de parties :</p>
+            <input type="number" id="partiesNumber" value="10">
+            <p>Temps de la pause en minute:</p>
+            <input type="number" id="breakTime" value="900">
+            <br>
+            <button style="margin-top: 25px;" onclick="updateParams()">Valider</button>
+        </div>
+
+        <div class="bottom">
+            <div class="logo">
+                <img src="https://le-cdn.website-editor.net/s/c728fd65baf94d07882bb30b4a0f771a/dms3rep/multi/opt/logo+apzel-1920w.png?Expires=1740061533&Signature=spTMJgPYBN0BHtL48rs2tjJrIOeib1AYpclx43eIWpCfLSJLnsN3sPL0H4B~mQwKSG0w7Xhxar0lZFKO1tJIP76tQ2EX2Cw7mBICh4dc6RUcNujrzsSjAxH2PYCJjNecZdCLZYI4MYlNJ8GRD9m5KaFQM2pOojKOH8iREWAEjpoQ-W0u4CiOd6Z~6L6at5EOA4yyYNLbid~eXdtnIXbtzeZKeK293B03yMwo-tQMvB6n-Uv9Ocop2iXnlLMGCzTJ1IaIlXseyb3QJO4lp3BOhQznvrwXztENmziSwBySF23EnGtfvpYCsMnCNS4wXtW3A7O0qCGMVthtZoBDYvQzmg__&Key-Pair-Id=K2NXBXLF010TJW" alt="logo" style="width: 250px; height: auto;">
+                <img src="./assets/images/inter2.png" alt="logo" style="width: 500px; height: auto; margin-top: 80px;">
+            </div>
+        </div>
+    </body>
+</html>

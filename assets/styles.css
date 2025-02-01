@@ -1,0 +1,110 @@
+hr {
+    color: #28b2a2;
+}
+.menu {
+    width: 100%;
+    margin-left: 2px;
+}
+.tab {
+    display: flex;
+    width: 100%;
+}
+.tablinks {
+    text-align: center;
+    border: solid 1px #28b2a2;
+    padding: 5px;
+    background: #FFF;
+}
+.tablinks.item {
+width: 15%;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-between;
+}
+.top {
+    display: flex;
+}
+.top .array {
+    width: 70%;
+}
+.top .lastNumber {
+    width: 30%;
+}
+.top .array table {
+    width: 90%;
+}
+
+/** Array **/
+.menu .item {
+    text-align: center;
+    border: solid 1px #28b2a2;
+    padding: 5px;
+    width: 15%;
+    background: #28b2a2;
+    color: #FFF;
+    font-weight: bold;
+}
+table .title,
+.array .title,
+.lastNumber .title,
+.orderList .title {
+    text-align: center;
+    border: solid 1px #28b2a2;
+    padding: 5px;
+    width: 89%;
+    background: #28b2a2;
+    color: #FFF;
+    font-weight: bold;
+    margin: 25px 0 0 0;
+}
+table td {
+    width: 60px !important;
+    text-align: center;
+    border: solid 1px #28b2a2;
+    padding: 5px;
+    cursor: pointer;
+}
+/** Last Number **/
+#lastNumber {
+    font-size: 250px;
+    border: solid 3px #28b2a2;
+    color: #28b2a2;
+    text-align: center;
+    border-radius: 50%;
+    margin: 25px;
+}
+/** Order List **/
+#numberList {
+    display: flex;
+    flex-wrap: wrap;
+}
+#numberList p {
+    font-size: 25px;
+    border: solid 1px #28b2a2;
+    color: #28b2a2;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 10px;
+}
+/** Logo **/
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.bottom .logo {
+    justify-content: space-around;
+    display: flex;
+}
+
+/* break page */
+#break {
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    border: solid 3px #28b2a2;
+    margin: 10% 35%;
+    color: #28b2a2;
+}
