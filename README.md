@@ -10,17 +10,15 @@ The Project Loto is a software application that simulates a lottery game. It all
 
 To install the Project Loto, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/project-loto.git`
-2. Navigate to the project directory: `cd project-loto`
-3. Install the dependencies: `npm install`
+1. Clone the repository: `git clone https://github.com/LudovicCocquyt/loto_scoreboard.git`
+2. Navigate to the project directory: `cd project-loto_scoreboard`
 
 ## Usage
 
 To use the Project Loto, follow these steps:
 
-1. Run the application: `npm start`
-2. Enter your chosen numbers.
-3. Compare the generated numbers with the winning numbers.
+1. Enter your chosen numbers.
+2. Compare the generated numbers with the winning numbers.
 
 ## Contributing
 
