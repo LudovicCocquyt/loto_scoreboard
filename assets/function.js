@@ -111,7 +111,11 @@ function showOrderList() {
         if (element) {
            element.innerHTML = "";
            for (let i = 0; i < showData.length; i++) {
-               element.innerHTML += "<p>" + showData[i] + "</p>";
+                if (showData[i] < 10)
+                    // Add padding for single digit
+                    element.innerHTML += "<p class='diffPadding'>" + showData[i] + "</p>";
+                else
+                    element.innerHTML += "<p>" + showData[i] + "</p>";
             }
         }
     }
