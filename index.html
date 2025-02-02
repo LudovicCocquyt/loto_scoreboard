@@ -13,6 +13,12 @@
         <!-- Menu -->
         <div class="tab">
             <div class="menu" hidden>
+                <button class="tablinks" onclick="reset()" title="Réinitialiser le tableau">
+                    <img src="./assets/images/rafraichir.png" alt="reset" style="width: 10px; height: 10px;">
+                </button>
+                <button class="tablinks" onclick="fullNumbers()" title="Remplir le tableau">
+                    <img src="./assets/images/full-size.png" alt="reset" style="width: 10px; height: 10px;">
+                </button>
                 <button class="tablinks item" onclick="openPage(event, 'parties')">Parties</button>
                 <button class="tablinks item" onclick="openPage(event, 'break')">Pause</button>
                 <button class="tablinks item" onclick="openPage(event, 'params')">Paramètres</button>
@@ -47,10 +53,7 @@
             <div class="top">
                 <div class="array">
                     <table>
-                        <p class="title">
-                            <img onclick="reset()" src="./assets/images/rafraichir.png" alt="reset" style="width: 10px; height: 10px;">
-                            Tableau
-                        </p>
+                        <p class="title">Tableau</p>
                     <script>
                         for (let i = 1; i <= 90; i++) {
                             if (i % 10 === 1) {

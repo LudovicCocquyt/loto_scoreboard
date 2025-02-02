@@ -140,3 +140,12 @@ function reset() {
     localStorage.setItem("numbers", JSON.stringify([]));
     location.reload();
 }
+
+function fullNumbers() {
+    let numbers = [];
+    for (let i = 1; i <= 90; i++) {
+        numbers.push(i);
+    }
+    localStorage.setItem("numbers", JSON.stringify(numbers));
+    location.reload();
+}
